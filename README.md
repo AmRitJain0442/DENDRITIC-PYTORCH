@@ -264,40 +264,20 @@ Training was conducted over 9 epochs (early stopping triggered at epoch 9):
 
 ### 5.2 Learning Curves
 
-```
-Training Loss Over Epochs
--------------------------
+![Training Curves](training_curves.png)
 
-1.0 |*
-    |  *
-0.8 |    *
-    |      *
-0.6 |        *
-    |          * *
-0.4 |              * *
-    |                  *
-0.2 |
-    +----+----+----+----+----+----+----+----+----+
-         1    2    3    4    5    6    7    8    9   Epoch
+**Key Observations:**
+- Training loss decreased consistently from 0.94 to 0.33
+- Validation loss reached minimum at epoch 6 (0.57), then increased (overfitting)
+- Validation accuracy plateaued around 91% in final epochs
+- Best model saved at epoch 6 before overfitting began
 
+![Training Analysis](training_analysis.png)
 
-Validation Accuracy Over Epochs
--------------------------------
-
-95% |                          * *
-    |
-90% |                    *
-    |
-85% |          *    *
-    |
-80% |    *        *    *
-    |
-75% |      *
-    |
-70% |*
-    +----+----+----+----+----+----+----+----+----+
-         1    2    3    4    5    6    7    8    9   Epoch
-```
+**Overfitting Analysis:**
+- Train-validation gap increased in later epochs
+- Early stopping triggered at epoch 9 after 3 epochs of no improvement
+- Model shows good generalization until epoch 6
 
 ### 5.3 Test Set Performance
 
