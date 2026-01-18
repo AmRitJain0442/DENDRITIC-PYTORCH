@@ -85,9 +85,9 @@ Thumbs.db
 # Model outputs
 outputs/
 results/
-*.png
-*.jpg
-*.jpeg
+# Allow plots and visualizations in root directory
+!training_*.png
+!*.png
 
 # Hugging Face
 .cache/
